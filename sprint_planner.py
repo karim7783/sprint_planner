@@ -9,15 +9,13 @@ import sqlite3
 
 class sprint_data_store:
     def __init__(self, *args, **kwargs):
-        self._dbconnection = None
-
-    def create_data_store(self):
-        pass
+        self._dbconnection = sqlite3.connect('sprint_data.db')
+        self._cursor = self._dbconnection.cursor()
 
     def enumerate_teams(self):
         pass
 
-    def spot_data_store(self):
+    def validate_data_store(self):
         pass
 
 
