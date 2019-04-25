@@ -18,6 +18,9 @@ class sprint_data_store:
     def validate_data_store(self):
         pass
 
+    def run_transaction(self, insert_or_update):
+        self._cursor.execute(insert_or_update)
+        self._dbconnection.commit()
 
 
 if __name__ == '__main__':
